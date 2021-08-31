@@ -1,14 +1,12 @@
-massiv = list(range(5,1,-1))
+massiv = [-1,-3,1,0,3,28]
 print(massiv)
-n = 0
+min_el = massiv[0]
+n = 1
 for element in massiv:
-	f = n+1
-	if f == len(massiv):
+	if n == len(massiv):
 		break
-	if massiv[n] < massiv[f]:
-		min_el = massiv[n]
-	else: 
-		min_el = massiv[f]
-	print(f'n = {n}, f = {f}')
-	n = f
+	if min_el >= element:
+		min_el = element
+	print(f'n = {n}, element = {element}, min_el = {min_el}')
+	n += 1
 print(min_el)
